@@ -15,7 +15,7 @@ let img6
 
 if(window.innerWidth > 700){
 
-    img1 = "./src/desktop/img1.png"
+   img1 = "./src/desktop/img1.png"
    img2 = "./src/desktop/img2.png"
    img3 = "./src/desktop/img3.png"
    img4 = "./src/desktop/img4.png"
@@ -78,8 +78,6 @@ else{
     img4 = "./src/mobile/img1.png"
 }
 
-console.log(window.innerWidth)
-
 let button = document.getElementById("button")
 let button2 = document.getElementById("button2")
 let bt = true
@@ -121,7 +119,7 @@ function editBack(backgroundImage){
     main.style.backgroundImage = (`url("${backgroundImage}")`)
     main.style.backgroundSize = "115%"
     setTimeout(() => {
-        main.style.backgroundSize = "100%"
+        main.style.backgroundSize = "cover"
     }, 800);
 }
 
