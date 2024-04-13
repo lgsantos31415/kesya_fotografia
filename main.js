@@ -117,7 +117,7 @@ button2.onclick = (e) => {
 
 function editBack(backgroundImage){
     main.style.backgroundImage = (`url("${backgroundImage}")`)
-    main.style.backgroundSize = "115%"
+    main.style.backgroundSize = "cover 115%"
     setTimeout(() => {
         main.style.backgroundSize = "cover"
     }, 800);

@@ -13,7 +13,7 @@ body{
     background-image: url("./src/desktop/img1.png");
     background-position: center;
     background-size: cover;
-    transition: background-size 800ms;
+    transition: all 800ms;
 }
 #header{
     display: flex;
