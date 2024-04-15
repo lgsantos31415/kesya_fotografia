@@ -7,7 +7,7 @@
 body{
     overflow: hidden;
 }
-#main{
+main{
     width: 100%;
     height: 100vh;
     background-image: url("./src/desktop/img1.png");
@@ -15,50 +15,63 @@ body{
     background-size: cover;
     transition: all 800ms;
 }
-#header{
+header{
+    padding: 24px 56px;
+    width: 100%;
+    height: 10vh;
     display: flex;
-    padding: 24px 64px;
     justify-content: space-between;
-}
-span{
-    color: white;
-    font-weight: 600;
+    align-items: center;
 }
 #footer{
-    position: absolute;
     width: 100%;
-    height: 25vh;
+    height: 30vh;
+    position: fixed;
     bottom: 0;
+    left: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     transition: all 800ms;
 }
-#button, #button2{
-    border-radius: 50%;
+footer{
+    padding-top: 15px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    overflow-x: scroll;
+    scrollbar-width: none;
+}
+#logo{
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+.button{
     width: 40px;
     height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     cursor: pointer;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, .15);
+    display: grid;
+    place-items: center;
 }
 i{
-    color: white;
     font-size: 24px;
+    color: white;
 }
-#photos{
-    width: 100%;
-    flex: 1;
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: 1fr;
+.item{
+    min-width: 18%;
+    cursor: pointer;
+    transition: all 800ms;
+}
+.item:hover{
+    transform: scale(110%) translateY(-5%);
+    z-index: 1;
 }
 #pic1, #pic2, #pic3, #pic4, #pic5, #pic6{
     background-position: center;
     background-size: cover;
-    cursor: pointer;
-    transition: transform 800ms, filter 250ms;
 }
 #pic1{
     background-image: url("./src/desktop/img1.png");
@@ -78,76 +91,56 @@ i{
 #pic6{
     background-image: url("./src/desktop/img6.png");
 }
-#pic1:hover, #pic2:hover, #pic3:hover, #pic4:hover, #pic5:hover, #pic6:hover{
-    transform: scale(115%) translateY(-5%);
-    z-index: 1;
-}
-#pic1:active, #pic2:active, #pic3:active, #pic4:active, #pic5:active, #pic6:active{
-    filter: invert(100%);
-}
 .invisible{
-    font-size: 0;
-    visibility: hidden;
+    display: none;
+    font-size: 0px;
 }
 #back-drawer{
     position: absolute;
-    left: 0;
     top: 0;
+    left: 0;
     width: 100%;
     height: 100vh;
 }
 #drawer{
-    position: absolute;
-    right: 0;
+    gap: 24px;
+    transition: all 800ms;
+    position: fixed;
     top: 0;
-    width: 22%;
+    right: 0;
+    width: 20%;
     height: 100vh;
-    backdrop-filter: blur(15px);
-    background: rgba(0, 0, 0, .6);
-    transform: translateX(100%);
-    transition: transform 800ms;
-    color: white;
-    font-weight: 300;
+    background: rgba(0, 0, 0, .8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     display: flex;
     flex-direction: column;
-    gap: 32px;
-    padding: 32px;
-}
-#drawer span{
+    padding: 24px;
     text-align: center;
-}
-#column{
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
+    transform: translateX(100%);
 }
 a{
     text-decoration: none;
     color: white;
     display: flex;
-    gap: 10px;
     align-items: center;
+    gap: 5px;
 }
-@media (max-width: 800px) {
-    #header{
-        padding: 24px 40px;
+#column{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 5px;
+}
+
+@media (max-width: 800px){
+    header{
+        padding: 32px 40px;
     }
-    #photos{
-        grid-template-columns: repeat(4, 1fr);
-    }
-    #footer{
-        position: fixed;
-        height: 30vh;
-    }
-    #pic5, #pic6{
-        display: none;
+    .item{
+        min-width: 30%;
     }
     #drawer{
-        position: fixed;
-        width: 80%;
-    }
-    #pic1:hover, #pic2:hover, #pic3:hover, #pic4:hover, #pic5:hover, #pic6:hover{
-        transform: none;
-        z-index: 1;
+        width: 85%;
     }
 }

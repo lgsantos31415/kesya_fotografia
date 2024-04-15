@@ -6,53 +6,53 @@
     <title>Kesya Fotografia</title>
 
     <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
     <script src="main.js" defer></script>
 </head>
 <body>
-    <div id="app">
-        <div id="main">
-            <div id="header">
-                <span>Kesya Fotografia</span>
-                <div id="button">
-                    <i class="ph ph-list"></i>
-                </div>
+    <main>
+        <header>
+            <span id="logo">Kesya Fotografia</span>
+            <div class="button" id="menu">
+                <i class="ph-thin ph-list"></i>
             </div>
+        </header>
+    </main>
+    <div id="footer">
+        <div id="tab">
+            <i class="ph-thin ph-caret-up invisible button"></i>
+            <i class="ph-thin ph-caret-down button"></i>
         </div>
-        <div id="footer">
-            <div id="button2">
-                <i id="up" class="ph ph-control invisible"></i>
-                <i id="down" class="ph ph-caret-down"></i>
-            </div>
-            <div id="photos">
-                <div id="pic1"></div>
-                <div id="pic2"></div>
-                <div id="pic3"></div>
-                <div id="pic4"></div>
-                <div id="pic5"></div>
-                <div id="pic6"></div>
-            </div>
-        </div>
-        <div id="back-drawer" class="invisible"></div>
-        <div id="drawer">
-            <span>Kesya Fotografia</span>
-            <div id="column">
-                    <a href="https://wa.me/5549991325635" target="_blank" rel="noopener noreferrer">
-                        <i class="ph-thin ph-whatsapp-logo"></i> (49) 9 9132-5635
-                    </a>
-                    <a href="https://www.instagram.com/kesya.fotografia" target="_blank" rel="noopener noreferrer">
-                        <i class="ph-thin ph-instagram-logo"></i> @kesya.fotografia
-                    </a>
-                    <a href="mailto:kesya.fotografia@gmail.com">
-                        <i class="ph-thin ph-envelope"></i> kesya.fotografia@gmail.com
-                    </a>
-            </div>
+        <footer>
+            <div class="item" id="pic1"></div>
+            <div class="item" id="pic2"></div>
+            <div class="item" id="pic3"></div>
+            <div class="item" id="pic4"></div>
+            <div class="item" id="pic5"></div>
+            <div class="item" id="pic6"></div>
+        </footer>
+    </div>
+    <div id="back-drawer" class="invisible"></div>
+    <div id="drawer">
+        <span id="logo">Kesya Fotografia</span>
+        <div id="column">
+            <a href="https://wa.me/5549991325635" target="_blank" rel="noopener noreferrer">
+                <i class="ph-thin ph-whatsapp-logo"></i>
+                (49) 9 9132-5635
+            </a>
+            <a href="http://instagram.com/kesya.fotografia" target="_blank" rel="noopener noreferrer">
+                <i class="ph-thin ph-instagram-logo"></i>
+                @kesya.fotografia
+            </a>
+            <a href="mailto:kesya.fotografia@gmail.com" target="_blank" rel="noopener noreferrer">
+                <i class="ph-thin ph-envelope"></i>
+                kesya.fotografia@gmail.com
+            </a>
         </div>
     </div>
 </body>
