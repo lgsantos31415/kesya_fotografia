@@ -13,7 +13,7 @@ let menu = document.getElementById("menu")
 let back_drawer = document.getElementById("back-drawer")
 let drawer = document.getElementById("drawer")
 
-let mobile = window.innerWidth > 800 ? "desktop" : "mobile"
+let mobile = window.innerWidth <= 800 ? "mobile" : "desktop"
 
 pic1.style.backgroundImage = `url("./src/${mobile}/img1.png")`
 pic2.style.backgroundImage = `url("./src/${mobile}/img2.png")`
@@ -24,12 +24,18 @@ pic6.style.backgroundImage = `url("./src/${mobile}/img6.png")`
 
 function mudarBack(pic, entrada){
     main.style.backgroundImage = `url("./src/${mobile}/${entrada}.png")`
-    pic.style.filter = "invert(100%)"
-    pic.style.transform = "scale(110%) translateY(-5%)"
-    setTimeout(() => {
-        pic.style.filter = "invert(0%)"
-        pic.style.transform = "scale(100%) translateY(0%)"
-    }, 800);
+    if(mobile == "mobile"){
+        pic.classList.add("clique")
+        setTimeout(() => {
+        pic.classList.remove("clique")
+        }, 1600);
+    }
+    else{
+        pic.classList.add("inverter")
+        setTimeout(() => {
+        pic.classList.remove("inverter")
+        }, 1600);
+    }
 }
 
 function mudarFoo(entrada, entrada2){

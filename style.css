@@ -143,4 +143,46 @@ a{
     #drawer{
         width: 85%;
     }
+    .item:hover{
+        transform: scale(100%) translateY(0%);
+        z-index: 1;
+    }
+    .item:active{
+        filter: invert(0%);
+    }
+}
+
+.inverter{
+    animation: inverter 1600ms forwards;
+}
+
+.clique{
+    animation: clique 1600ms forwards;
+}
+
+@keyframes inverter {
+    0% {
+        filter: invert(0%);
+    }
+    50% {
+        filter: invert(100%);
+    }
+    100% {
+        filter: invert(0%);
+    }
+}
+
+@keyframes clique {
+    0% {
+        transform: scale(100%) translateY(0%);
+        filter: invert(0%);
+    }
+    50% {
+        transform: scale(110%) translateY(-5%);
+        filter: invert(100%);
+    }
+    100% {
+        transform: scale(100%) translateY(0%);
+        filter: invert(0%);
+    }
 }
