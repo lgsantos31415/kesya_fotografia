@@ -15,15 +15,15 @@ let drawer = document.getElementById("drawer")
 
 let mobile = window.innerWidth <= 800 ? "mobile" : "desktop"
 
-pic1.style.backgroundImage = `url("./src/${mobile}/img1.png")`
-pic2.style.backgroundImage = `url("./src/${mobile}/img2.png")`
-pic3.style.backgroundImage = `url("./src/${mobile}/img3.png")`
-pic4.style.backgroundImage = `url("./src/${mobile}/img4.png")`
-pic5.style.backgroundImage = `url("./src/${mobile}/img5.png")`
-pic6.style.backgroundImage = `url("./src/${mobile}/img6.png")`
+pic1.style.backgroundImage = `url("./src/${mobile}/img1.webp")`
+pic2.style.backgroundImage = `url("./src/${mobile}/img2.webp")`
+pic3.style.backgroundImage = `url("./src/${mobile}/img3.webp")`
+pic4.style.backgroundImage = `url("./src/${mobile}/img4.webp")`
+pic5.style.backgroundImage = `url("./src/${mobile}/img5.webp")`
+pic6.style.backgroundImage = `url("./src/${mobile}/img6.webp")`
 
 function mudarBack(pic, entrada){
-    main.style.backgroundImage = `url("./src/${mobile}/${entrada}.png")`
+    main.style.backgroundImage = `url("./src/${mobile}/${entrada}.webp")`
     if(mobile == "mobile"){
         pic.classList.add("clique")
         setTimeout(() => {
