@@ -23,7 +23,7 @@ header{
     justify-content: space-between;
     align-items: center;
 }
-#footer{
+footer{
     width: 100%;
     height: 30vh;
     position: fixed;
@@ -34,7 +34,7 @@ header{
     align-items: center;
     transition: all 800ms;
 }
-footer{
+section{
     padding-top: 15px;
     width: 100%;
     height: 100%;

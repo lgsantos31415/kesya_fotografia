@@ -8,7 +8,7 @@ let pic4 = document.getElementById("pic4")
 let pic5 = document.getElementById("pic5")
 let pic6 = document.getElementById("pic6")
 
-let tab = document.getElementById("tab")
+let tab = document.getElementById("buttons")
 let menu = document.getElementById("menu")
 let back_drawer = document.getElementById("back-drawer")
 let drawer = document.getElementById("drawer")
