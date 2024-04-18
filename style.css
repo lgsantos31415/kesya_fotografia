@@ -43,6 +43,10 @@ footer {
   overflow-x: scroll;
   scrollbar-width: none;
 }
+::-webkit-scrollbar {
+  display: none;
+  visibility: hidden;
+}
 .logo {
   color: white;
   font-weight: 700;
